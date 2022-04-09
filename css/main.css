@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+/*------ reset -----*/
 *,
 *::after,
 *::before {
@@ -52,6 +54,37 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
+button,
+span,
+input[type="text"]::placeholder {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/*------ background -----*/
+
 .area{
     background: #4e54c8;
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -76,7 +109,7 @@ body {
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
+    animation: backgroundAnimation 25s linear infinite;
     bottom: -150px;
 
 }
@@ -157,9 +190,7 @@ body {
     animation-duration: 11s;
 }
 
-
-
-@keyframes animate {
+@keyframes backgroundAnimation {
 
     0%{
         transform: translateY(0) rotate(0deg);
@@ -175,70 +206,7 @@ body {
 
 }
 
-button,
-span,
-input[type="text"]::placeholder {
-    font-family: inherit;
-}
-
-button {
-    cursor: pointer;
-    font-family: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 3rem;
-}
-
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-.title h2 {
-    font-size: var(--font-size-3xl);
-    font-family: 'Urbanist', sans-serif;
-}
-
-.title p {
-    border-bottom: 2px solid #4C2566;
-}
-
-.light__theme {
-    --light-color: #030303!important;
-    --dark-color: #f7f7f7!important;
-    --primary-color: #f7f7f7!important;
-}
-
-.light__theme body {
-    background: #fff!important;
-}
-
-.light__theme .btn__primary:hover {
-    color: var(--dark-color);
-}
-
-
-
+/*------ form -----*/
 
 .form {
     width: 45%;
@@ -335,7 +303,13 @@ img {
     width: 75%;
     margin: 0 auto;
     position: absolute;
-    /* top: 90%; */bottom: 10%;left: 0;right: 0;background: #f9f7f7;/* box-shadow: 5px 5px 10px #bebebe, 0px 0px 15px #eee; */border-radius: var(--border-raduis-sm);}
+    /* top: 90%; */
+    bottom: 10%;
+    left: 0;right: 0;
+    background: #f9f7f7;
+    /* box-shadow: 5px 5px 10px #bebebe, 0px 0px 15px #eee; */
+    border-radius: var(--border-raduis-sm);
+}
 
 .card__wrapper {
     display: flex;
@@ -348,8 +322,10 @@ img {
 }
 
 .card__img {
-    display: flex
-;align-items: center;justify-content: center;}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .card__img img {
     width: 15rem;
@@ -369,15 +345,43 @@ img {
     display: flex;
     gap: 1.5rem;
     color: #b1b1b1
-;/* font-weight: 600; */;}
+}
 
 .card__follow span {
-    color: #e91e63
-;padding-right: 0.2rem;font-weight: 700;}
+    color: #e91e63;
+    padding-right: 0.2rem;
+    font-weight: 700;
+}
 
 .card__name {
     font-size: 2.5rem;
-    font-weight: 600;font-family: 'Poppins';}
+    font-weight: 600;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    background-image: linear-gradient(
+            -225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
 
 .card__username a {
     color: #b1b1b1;
@@ -403,4 +407,6 @@ img {
     padding: 1rem;
     border-radius: var(--border-raduis-sm);
     background-color: aqua;
-    color: var(--dark-color);}
+    color: var(--dark-color);
+}
+
