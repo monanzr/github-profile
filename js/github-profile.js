@@ -4,6 +4,7 @@ const btnSearch = document.getElementById('btn-search');
 const username = document.getElementById('username');
 const card = document.getElementById('card');
 const gitBio = document.getElementById('card-bio')
+const elements = document.querySelector('.elements')
 
 // var searchTerm = API_URL+username.value
 
@@ -13,15 +14,15 @@ const getUser = () => {
     }
     else {
         fetch(API_URL + username.value)
-        .then(Response => Response.json())
-        .then((data) => {
-            if (data.message == "Not Found") {
-                toastify('User Not found')
-            } else {
-            console.log(data);
+            .then(Response => Response.json())
+            .then((data) => {
+                if (data.message == "Not Found") {
+                    toastify('User Not found')
+                } else {
+                    console.log(data);
 
-            card.innerHTML =
-                `<div class="card__wrapper">
+                    card.innerHTML =
+                        `<div class="card__wrapper">
             <div class="card__left">
                 <div class="card__img">
                     <img src="${data.avatar_url}">
@@ -42,8 +43,10 @@ const getUser = () => {
                 <div class="card__right--two"><i class="fa fa-pencil-alt" aria-hidden="true"></i></div>
             </div>
         </div>`;
-            }
-        });
+                }
+            });
+        elements.style.justifyContent = "center";
+
     }
 }
 
