@@ -89,7 +89,7 @@ img {
     background: #4e54c8;
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
 }
 
@@ -206,17 +206,20 @@ img {
 
 }
 
+.elements {
+    position: absolute;
+        top: 0;
+    right:0;
+    left: 0;
+display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 5rem;height: 100vh;width: 100%;padding: 5rem 0;}
+
 /*------ form -----*/
 
 .form {
     width: 45%;
-    margin: 6rem auto;
+    /* margin: 6rem auto 0 auto; */
     box-shadow: 5px 5px 30px #bebebe, 0px 0px 15px #ffffff;
     padding: 3rem 7rem;
-    position: absolute;
-    top: 0;
-    right:0;
-    left: 0;
     border-radius: var(--border-raduis-sm);}
 
 .form h1 {
@@ -302,10 +305,10 @@ img {
 .card {
     width: 75%;
     margin: 0 auto;
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0; */
     /* bottom: 0; */
-    left: 0;right: 0;
+    /* left: 0; *//* right: 0; */
     background: #f9f7f7;
     /* box-shadow: 5px 5px 10px #bebebe, 0px 0px 15px #eee; */
     border-radius: var(--border-raduis-sm);
