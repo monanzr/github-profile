@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Github</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lib/toastify.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="form">
+        <h1>Enter Your ID Github</h1>
+        <label class="input">
+            <input class="username" id="username" name="username" type="text" required>
+            <span class="username__label">Username</span>
+        </label>
+        <button type="button" id="btn-search" onclick="getUser()">Search User</button>
+    </div>
+
+    <div class="card" id="card"></div>
+
+    
+
+<script src="js/github-profile.js"></script>
+<script src="js/lib/toastify.js"></script>
+</body>
+</html>
