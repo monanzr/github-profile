@@ -208,10 +208,10 @@ img {
 
 .elements {
     position: absolute;
-        top: 0;
+    top: 0;
     right:0;
     left: 0;
-display: flex;flex-direction: column;align-items: center;justify-content: center;gap: 5rem;height: 100vh;width: 100%;padding: 5rem 0;}
+    display: flex;flex-direction: column;align-items: center;justify-content: flex-start;gap: 5rem;height: 100vh;width: 100%;padding: 5rem 0;}
 
 /*------ form -----*/
 
@@ -316,13 +316,13 @@ display: flex;flex-direction: column;align-items: center;justify-content: center
 
 .card__wrapper {
     display: flex;
-    
+
     align-items: center;justify-content: space-between;flex-flow: wrap;}
 
 .card__left {
     display: flex;
     padding: 3rem 5rem;
-flex-wrap: wrap;}
+    flex-wrap: wrap;}
 
 .card__img {
     display: flex;
